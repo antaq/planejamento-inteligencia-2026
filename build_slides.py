@@ -112,7 +112,7 @@ MODULOS = {
 SLIDES = []
 
 
-BASES = {4:1.7,5:1.7,6:1.6,7:1.45,8:2.1,10:1.5,11:1.35,12:1.65,13:1.55,14:1.7,16:1.55,17:1.7,18:1.55,19:2.0,20:1.7}
+BASES = {4:1.7,5:1.7,6:1.6,7:1.45,8:2.1,10:1.5,11:1.35,12:1.65,13:1.55,14:1.7,16:1.55,17:1.7,18:1.55,19:2.0,20:1.35}
 
 
 def slide(n, mod, title, kicker, titulo, body, extra_css="", base=1.0):
@@ -438,16 +438,16 @@ slide(19, 3, "Conportos e CEPAI/SP", "Inteligência · Segurança portuária", "
 slide(20, 4, "Do plano ao campo", "Dia de Fiscal · Visita técnica", "Do plano ao campo",
       wrap(
           col(7, """
-      <p class="sec">Perguntas para fazer ao fiscal durante a visita</p>
-      """ + card("fa-bullseye", "Por que esta instalação?", "Qual faixa de risco, qual categoria do PAF e qual fator a trouxe para a lista.") + """
-      """ + card("fa-stairs", "Qual nível de ação é este?", "O que se verifica em campo, e o que já foi resolvido à distância ou por monitoramento.") + """
-      """ + card("fa-mobile-screen", "Como se registra?", "Como o SFIS Mobile e os demais sistemas entram no trabalho de campo.") + """
-      """ + card("fa-satellite", "O que a inteligência acrescentou?", "Imagens, alertas e bases consultadas antes de chegar ao local."))
+      <p class="sec">Como será a visita técnica</p>
+      """ + card("fa-people-group", "Guiada pelos fiscais da Regional", "Os servidores da Gerência Regional do Rio de Janeiro (GRERJ) levam os grupos pelas instalações portuárias do Rio de Janeiro e de Itaguaí.") + """
+      """ + card("fa-ship", "Conhecer o mercado regulado", "Ver de perto onde os serviços de transporte aquaviário são prestados ajuda a decidir com mais acerto na Sede.") + """
+      """ + card("fa-award", "Valorizar quem fiscaliza", "A rotina de um porto de grande porte, contada por quem a vive todos os dias.", "card-gold"))
           + "\n" + col(5, """
       <div class="destaque"><p class="font-montserrat font-bold" style="font-size:calc(24px * var(--tz));">Seu papel na visita</p>
-        <p style="font-size:calc(19px * var(--tz)); color:#DBEAFE; margin-top:8px !important;">Você acompanha e observa. <b style="color:#FFD700;">Não compõe a equipe de fiscalização</b> e não elabora atos como notificações, autos de infração ou interdições.</p></div>
-      """ + card("fa-helmet-safety", "Segurança primeiro", "Se for preciso, a SFC cede o EPI adicional para acompanhar a fiscalização.") + """
-      """ + card("fa-comments", "Troca de experiências", "Ao final, os grupos compartilham o que viveram, e a Gerência Regional apresenta seu trabalho.", "card-gold"))))
+        <p style="font-size:calc(19px * var(--tz)); color:#DBEAFE; margin-top:8px !important;">Você visita e conhece. <b style="color:#FFD700;">Não compõe a equipe de fiscalização</b> e não elabora atos como notificações, autos de infração ou interdições.</p></div>
+      """ + card("fa-helmet-safety", "Segurança primeiro", "Se for preciso, a SFC cede o EPI adicional. Siga as orientações dos fiscais durante todo o percurso.") + """
+      """ + card("fa-comments", "Troca de experiências", "Na reunião de encerramento, cada grupo conta o que viveu, e a Regional apresenta suas atividades, seus desafios e o dia a dia.") + """
+      """ + card("fa-certificate", "Avaliação e certificado", "Depois da visita, você avalia o curso. O certificado digital vem da SFC, com as horas da teoria e da visita.", ""))))
 
 
 # ---------------------------------------------------------------------------
