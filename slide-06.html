@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Classificação de risco: o IPR — Dia de Fiscal 2026</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>:root { --tz-base: 1.6; }
+
+body { margin:0; padding:0; overflow:hidden; font-family:'Open Sans',sans-serif; }
+.slide { width:100vw; height:100vh; position:relative; display:flex; flex-direction:column; overflow:hidden; background:#ffffff; }
+.font-montserrat { font-family:'Montserrat',sans-serif; }
+.text-brand { color:#003366; } .bg-brand { background-color:#003366; }
+.text-accent { color:#0066CC; } .bg-accent { background-color:#0066CC; }
+.header-bar { height:10px; background:#003366; width:100%; }
+.secondary-bar { height:4px; background:#0066CC; width:100%; }
+.stat-card { background:linear-gradient(135deg,#003366,#004d99); border-radius:16px; padding:20px 18px; text-align:center; color:white; position:relative; overflow:hidden; }
+.stat-num { font-family:'Montserrat',sans-serif; font-weight:900; font-size:calc(48px * var(--tz)); line-height:1; }
+.stat-lbl { font-size:calc(17px * var(--tz)); line-height:1.3; color:#BFD3E8; margin-top:6px; }
+.card { display:flex; align-items:flex-start; gap:16px; padding:14px 20px; background:#F8FAFC; border-radius:14px; border-left:5px solid #0066CC; }
+.card-green { background:linear-gradient(135deg,#F0FDF4,#DCFCE7); border-left-color:#22C55E; }
+.card-amber { background:linear-gradient(135deg,#FFFBEB,#FEF3C7); border-left-color:#F59E0B; }
+.card-red   { background:linear-gradient(135deg,#FEF2F2,#FEE2E2); border-left-color:#EF4444; }
+.card-gold  { background:linear-gradient(135deg,#FFFBEB,#FEF3C7); border-left-color:#FFD700; }
+.ico { width:50px; height:50px; border-radius:12px; flex-shrink:0; display:flex; align-items:center; justify-content:center; background:#DBEAFE; }
+.ico i { color:#0066CC; font-size:calc(22px * var(--tz)); }
+.ct { font-family:'Montserrat',sans-serif; font-weight:700; color:#003366; font-size:calc(22px * var(--tz)); line-height:1.25; margin:0; }
+.cd { color:#475569; font-size:calc(18px * var(--tz)); line-height:1.45; margin:3px 0 0; }
+.cd b, .cd strong { color:#003366; }
+.slide > .flex-1 > .flex.flex-col,
+.slide > .flex-1 > .grid > .flex.flex-col { justify-content:center; }
+.pill { display:inline-block; padding:3px 12px; border-radius:999px; font-family:'Montserrat',sans-serif; font-weight:700; font-size:calc(15px * var(--tz)); letter-spacing:0.04em; }
+.pill-a { background:#DCFCE7; color:#166534; } .pill-b { background:#DBEAFE; color:#1E40AF; }
+.pill-c { background:#FEE2E2; color:#991B1B; } .pill-gold { background:#FEF3C7; color:#92400E; }
+.formula { background:#0F172A; color:#E2E8F0; border-radius:14px; padding:16px 24px; font-family:'Courier New',monospace; font-size:calc(19px * var(--tz)); }
+.destaque { background:linear-gradient(135deg,#003366,#0066CC); color:#fff; border-radius:16px; padding:18px 26px; }
+.destaque p { margin:0; }
+.legenda { color:#64748B; font-size:calc(15px * var(--tz)); line-height:1.5; }
+.num-b { font-family:'Montserrat',sans-serif; font-weight:900; color:#0066CC; font-size:calc(34px * var(--tz)); line-height:1; min-width:56px; text-align:center; }
+.sec { font-family:'Montserrat',sans-serif; font-weight:700; font-size:calc(15px * var(--tz)); letter-spacing:.12em; text-transform:uppercase; color:#64748B; margin:0 0 10px; }
+.hdr .text-5xl { font-size:46px; line-height:1; } .hdr .text-lg { font-size:19px; line-height:1.5; } .ftr .text-sm { font-size:14px; line-height:1.4; }
+.gap-3 { row-gap:22px; } .gap-4 { row-gap:24px; } .gap-5 { row-gap:26px; } .gap-6 { row-gap:28px; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header-bar"></div>
+  <div class="secondary-bar"></div>
+
+  <div class="px-16 pt-6 pb-2 hdr">
+    <div class="flex items-center gap-3">
+      <div style="width:5px;height:44px;" class="bg-accent"></div>
+      <div>
+        <p class="font-montserrat font-bold text-gray-400 text-lg uppercase tracking-widest">Fiscalização responsiva · Modelo de risco</p>
+        <p class="text-5xl font-montserrat font-bold text-brand uppercase tracking-tight">Classificação de risco: o IPR</p>
+      </div>
+      <div class="ml-auto flex items-center gap-3">
+        <span class="font-montserrat font-bold text-accent uppercase tracking-widest" style="font-size:15px;"><i class="fas fa-clipboard-list"></i>&nbsp; Planejamento</span>
+        <img src="assets/logo-antaq-azul.png" alt="ANTAQ" style="height:32px;">
+        <p class="font-montserrat font-bold text-gray-400 tracking-wider" style="font-size:12px; line-height:1.35;">SFC<br/>GPF</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-1 px-16 pb-4 grid grid-cols-12 gap-8 items-center min-h-0">
+    <div class="col-span-5 flex flex-col gap-4 ">
+
+      <div class="destaque"><p class="font-montserrat font-bold" style="font-size:calc(24px * var(--tz));">Índice de Perfil de Risco (IPR)</p>
+        <p style="font-size:calc(18px * var(--tz)); color:#DBEAFE; margin-top:6px !important;">Cada outorga recebe uma <b style="color:#FFD700;">nota de 0 a 100</b> e uma <b style="color:#FFD700;">faixa de A1 a C4</b>.</p></div>
+      <div class="card "><div class="ico"><i class="fas fa-file-signature"></i></div><div><p class="ct">A unidade é a outorga, não a empresa</p><p class="cd">Uma empresa com quatro linhas de travessia tem quatro IPRs: cada uma tem o seu risco.</p></div></div>
+      <div class="card "><div class="ico"><i class="fas fa-scale-balanced"></i></div><div><p class="ct">A nota mistura duas coisas</p><p class="cd"><b>O que a empresa já fez</b> (autuações, reincidência, denúncias) e <b>o que ela é</b> (atividade, porte, acesso, maturidade).</p></div></div>
+      <div class="card "><div class="ico"><i class="fas fa-user-check"></i></div><div><p class="ct">O índice prioriza; a chefia decide</p><p class="cd">Toda inclusão ou exclusão fora da regra fica registrada, com autor e fundamento.</p></div></div>
+    </div>
+    <div class="col-span-7 flex flex-col gap-4 ">
+
+      <p class="sec">2.426 outorgas ativas no ciclo 2027, por faixa de risco</p>
+      <div class="flex" style="height:64px; border-radius:14px; overflow:hidden; font-family:Montserrat; font-weight:900; color:#fff; font-size:calc(22px * var(--tz));">
+        <div style="width:17.8%; background:#22C55E;" class="flex items-center justify-center">A</div>
+        <div style="width:58%; background:#3B82F6;" class="flex items-center justify-center">B</div>
+        <div style="width:24.2%; background:#EF4444;" class="flex items-center justify-center">C</div>
+      </div>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="card card-green" style="flex-direction:column;"><p class="ct">Grupo A · 431</p><p class="cd">menor risco: monitoramento e sorteio auditável</p></div>
+        <div class="card" style="flex-direction:column;"><p class="ct">Grupo B · 1.408</p><p class="cd">risco intermediário: ação remota</p></div>
+        <div class="card card-red" style="flex-direction:column;"><p class="ct">Grupo C · 587</p><p class="cd">maior risco: ação presencial, até intervenção</p></div>
+      </div>
+      <p class="sec" style="margin-top:6px;">Solução fiscal de cada faixa</p>
+      <div class="grid grid-cols-8 gap-2">
+        <div class="text-center"><span class="pill pill-a">A1</span><p class="font-montserrat font-black text-brand" style="font-size:calc(20px * var(--tz)); margin:6px 0 0;">272</p><p class="legenda" style="margin:0; font-size:calc(9.5px * var(--tz));">monitoramento</p></div>
+        <div class="text-center"><span class="pill pill-a">A2</span><p class="font-montserrat font-black text-brand" style="font-size:calc(20px * var(--tz)); margin:6px 0 0;">159</p><p class="legenda" style="margin:0; font-size:calc(9.5px * var(--tz));">monitoramento</p></div>
+        <div class="text-center"><span class="pill pill-b">B1</span><p class="font-montserrat font-black text-brand" style="font-size:calc(20px * var(--tz)); margin:6px 0 0;">906</p><p class="legenda" style="margin:0; font-size:calc(9.5px * var(--tz));">documental</p></div>
+        <div class="text-center"><span class="pill pill-b">B2</span><p class="font-montserrat font-black text-brand" style="font-size:calc(20px * var(--tz)); margin:6px 0 0;">502</p><p class="legenda" style="margin:0; font-size:calc(9.5px * var(--tz));">à distância</p></div>
+        <div class="text-center"><span class="pill pill-c">C1</span><p class="font-montserrat font-black text-brand" style="font-size:calc(20px * var(--tz)); margin:6px 0 0;">286</p><p class="legenda" style="margin:0; font-size:calc(9.5px * var(--tz));">programada</p></div>
+        <div class="text-center"><span class="pill pill-c">C2</span><p class="font-montserrat font-black text-brand" style="font-size:calc(20px * var(--tz)); margin:6px 0 0;">194</p><p class="legenda" style="margin:0; font-size:calc(9.5px * var(--tz));">sem aviso</p></div>
+        <div class="text-center"><span class="pill pill-c">C3</span><p class="font-montserrat font-black text-brand" style="font-size:calc(20px * var(--tz)); margin:6px 0 0;">77</p><p class="legenda" style="margin:0; font-size:calc(9.5px * var(--tz));">intensiva</p></div>
+        <div class="text-center"><span class="pill pill-c">C4</span><p class="font-montserrat font-black text-brand" style="font-size:calc(20px * var(--tz)); margin:6px 0 0;">30</p><p class="legenda" style="margin:0; font-size:calc(9.5px * var(--tz));">intervenção</p></div>
+      </div>
+      <p class="legenda">Fonte: minuta da NT de Metodologia do PAF 2027 (rodada de validação de 29/09/2026), Quadro 2.</p>
+    </div>
+  </div>
+
+  <div class="px-16 pb-4 flex justify-between items-center border-t border-gray-100 pt-3 mx-8 ftr">
+    <p class="text-gray-400 text-sm">Dia de Fiscal 2026 · Planejamento e inteligência das fiscalizações · SFC / GPF — ANTAQ</p>
+    <p class="text-gray-300 text-sm font-mono">6 / 21</p>
+  </div>
+</div>
+<script src="zoom.js"></script>
+<script>document.addEventListener("keydown",function(e){if(["ArrowRight","ArrowLeft","PageDown","PageUp","Home","End"," ","f","F"].indexOf(e.key)!==-1){e.preventDefault();window.parent.postMessage({type:"slide-nav",key:e.key},"*");}});</script>
+</body>
+</html>
