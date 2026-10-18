@@ -280,7 +280,7 @@ cats = [
 slide(10, 2, "Plano Anual de Fiscalização", "PAF · O que é", "Plano Anual de Fiscalização",
       wrap(
           col(7, """
-      <div class="destaque"><p style="font-size:calc(21px * var(--tz));"><b style="color:#FFD700;">PPF</b> é o plano de quatro anos (2025–2028), com as diretrizes. <b style="color:#FFD700;">PAF</b> é o plano do ano: detalha quais ações vão a campo, e onde.</p></div>
+      <div class="destaque"><p style="font-size:calc(21px * var(--tz));"><b style="color:#FFD700;">PPF</b> é o plano de quatro anos (2025–2028). <b style="color:#FFD700;">PAF</b> é o plano do ano: detalha quais ações vão a campo, e onde.</p></div>
       <p class="sec">Quatro categorias de fiscalização no PAF</p>
       <div class="grid grid-cols-2 gap-4" style="align-items:stretch;">
       """ + "\n".join(card(i, t, d) for i, t, d, _ in cats) + """
@@ -292,7 +292,7 @@ slide(10, 2, "Plano Anual de Fiscalização", "PAF · O que é", "Plano Anual de
         <p class="font-montserrat font-black" style="font-size:calc(26px * var(--tz)); line-height:1.3;">processos instaurados<br/><span style="color:#FFD700;">÷ processos previstos × 100</span></p>
         <p class="stat-lbl" style="font-size:calc(20px * var(--tz));">Meta: <b style="color:#FFD700;">≥ 90%</b>, com acompanhamento mensal</p>
       </div>
-      """ + card("fa-people-arrows", "Quem faz o quê", "<b>GPF e unidades regionais</b> executam; a <b>SFC</b> aprova e responde pelo resultado; <b>GCOR e GRAT</b> são consultadas; a <b>Diretoria</b> é informada.") + """
+      """ + card("fa-people-arrows", "Quem faz o quê", "<b>GPF</b> planeja, em parceria com a <b>GCOR</b> e a <b>GRAT</b>.<br/><b>SFC</b> traz as diretrizes.<br/><b>Diretoria</b> aprova.<br/><b>Unidades regionais</b> executam.") + """
       """ + card("fa-file-lines", "Versão em construção", "O PAF 2027 segue para a Diretoria Colegiada até 31/10. Os próximos slides mostram a proposta.", "card-gold"))))
 
 cal = [("29/09", "Validação do IPR e da equalização"), ("30/09", "Data de referência do ciclo 2027"),
