@@ -96,6 +96,7 @@ HEAD = """<!DOCTYPE html>
   </div>
 </div>
 <script src="zoom.js"></script>
+<script src="anim.js"></script>
 <script>document.addEventListener("keydown",function(e){{if(["ArrowRight","ArrowLeft","PageDown","PageUp","Home","End"," ","f","F"].indexOf(e.key)!==-1){{e.preventDefault();window.parent.postMessage({{type:"slide-nav",key:e.key}},"*");}}}});</script>
 </body>
 </html>
@@ -216,11 +217,11 @@ slide(6, 1, "Classificação de risco: o IPR", "Fiscalização responsiva · Mod
       """ + card("fa-user-check", "O índice prioriza; a chefia decide", "Toda inclusão ou exclusão fora da regra fica registrada, com autor e fundamento.")) + "\n"
           + col(7, f"""
       <p class="sec">2.426 outorgas ativas no ciclo 2027, por faixa de risco</p>
-      <div class="flex" style="height:64px; border-radius:14px; overflow:hidden; font-family:Montserrat; font-weight:900; color:#fff; font-size:calc(22px * var(--tz));">
-        <div style="width:17.8%; background:#22C55E;" class="flex items-center justify-center">A</div>
-        <div style="width:58%; background:#3B82F6;" class="flex items-center justify-center">B</div>
-        <div style="width:24.2%; background:#EF4444;" class="flex items-center justify-center">C</div>
-      </div>
+      <div class="bar-row"><div class="bar-trk flex" style="height:64px; border-radius:14px; overflow:hidden; font-family:Montserrat; font-weight:900; color:#fff; font-size:calc(22px * var(--tz));">
+        <div style="width:17.8%; background:#22C55E;" class="seg flex items-center justify-center">A</div>
+        <div style="width:58%; background:#3B82F6;" class="seg flex items-center justify-center">B</div>
+        <div style="width:24.2%; background:#EF4444;" class="seg flex items-center justify-center">C</div>
+      </div></div>
       <div class="grid grid-cols-3 gap-4">
         <div class="card card-green" style="flex-direction:column;"><p class="ct">Grupo A · 431</p><p class="cd">menor risco: monitoramento e sorteio auditável</p></div>
         <div class="card" style="flex-direction:column;"><p class="ct">Grupo B · 1.408</p><p class="cd">risco intermediário: ação remota</p></div>

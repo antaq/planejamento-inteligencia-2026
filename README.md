@@ -17,3 +17,7 @@ Estrutura: 01 capa · 02 apresentador · 03 divisória · 04–08 Módulo 1, Pla
   Dados por unidade regional e custos de deslocamento ficaram de fora de propósito.
 
 Para ver: `python3 -m http.server 8766` nesta pasta e abrir `http://localhost:8766/`.
+
+## Animação de entrada
+
+`anim.js` (copiado de `apresentacao_sfc_agendas_sincronia`) faz os cards entrarem em sequência, como cartas postas na mesa; os rótulos de seção surgem e a barra de grupos de risco (slide 6) cresce da esquerda para a direita. Vale para o apresentador, os slides de conteúdo e o encerramento; capa e divisórias ficam de fora. Respeita "reduzir movimento". Este deck não tem tabelas, então a animação de tabela não aparece aqui.
