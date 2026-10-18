@@ -27,7 +27,10 @@
     '@keyframes linha-desce{from{opacity:0;clip-path:inset(0 0 100% 0);transform:translateX(-10px)}to{opacity:1;clip-path:inset(0 0 0 0);transform:none}}' +
     '@keyframes marco-avanca{from{opacity:0;clip-path:inset(0 100% 0 0)}to{opacity:1;clip-path:inset(0 0 0 0)}}' +
     '.anim-linha{animation:linha-desce .6s cubic-bezier(.22,.8,.3,1) both;animation-delay:calc(var(--d,0) * 1s)}' +
-    '.anim-marco{animation:marco-avanca .6s cubic-bezier(.22,.8,.3,1) both;animation-delay:calc(var(--d,0) * 1s)}';
+    '.anim-marco{animation:marco-avanca .6s cubic-bezier(.22,.8,.3,1) both;animation-delay:calc(var(--d,0) * 1s)}' +
+    // textos soltos (fora de cards): deslizam da esquerda para a direita, começando transparentes
+    '@keyframes desliza{from{opacity:0;transform:translateX(-44px)}to{opacity:1;transform:none}}' +
+    '.anim-desliza{animation:desliza .65s cubic-bezier(.22,.8,.3,1) both;animation-delay:calc(var(--d,0) * 1s)}';
   document.head.appendChild(st);
 
   var CARTAS = '.rt,.inst,.niv-r,.pr,.enf,.nv,.card,.stat-card,.destaque,.area,.gef,.ri,.comp,.formula,' +
@@ -35,15 +38,16 @@
   var SURGE = '.titulo-sec,.sec';
   var TABELA = 'table.tbl';
   var LINHA = '.ps';
+  var TEXTO = '.flex-1 p,.flex-1 .pill,.txt';       // textos soltos; .txt agrupa vários numa peça só
   var ANIM = [];                                   // tudo que recebeu --d, para o ajuste de duração
   var slide = document.querySelector('.slide');
   if (!slide) return;
 
-  var todos = Array.prototype.slice.call(slide.querySelectorAll(CARTAS + ',' + SURGE + ',' + TABELA + ',' + LINHA)).filter(function (e) {
+  var todos = Array.prototype.slice.call(slide.querySelectorAll(CARTAS + ',' + SURGE + ',' + TABELA + ',' + LINHA + ',' + TEXTO)).filter(function (e) {
     var foot = slide.lastElementChild;
     if (foot.contains(e)) return false;
     var p = e.parentElement;                       // ignora cards dentro de outro card
-    while (p && p !== slide) { if (p.matches(CARTAS)) return false; p = p.parentElement; }
+    while (p && p !== slide) { if (p.matches(CARTAS) || p.matches('.txt')) return false; p = p.parentElement; }
     return true;
   });
 
@@ -64,6 +68,7 @@
         t += 0.17;
       });
     }
+    else if (e.matches(TEXTO) && !e.matches(CARTAS)) { marca(e, 'anim-desliza', t); t += passo * 0.7; }
     else {
       var w = e.getBoundingClientRect().width;
       var largo = w > 900;

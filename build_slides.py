@@ -203,7 +203,7 @@ faixas = [("A1", 272, "monitoramento", "a"), ("A2", 159, "monitoramento", "a"), 
           ("B2", 502, "à distância", "b"), ("C1", 286, "programada", "c"), ("C2", 194, "sem aviso", "c"),
           ("C3", 77, "intensiva", "c"), ("C4", 30, "intervenção", "c")]
 fx = "\n".join(
-    f'        <div class="text-center"><span class="pill pill-{g}">{f}</span>'
+    f'        <div class="txt text-center"><span class="pill pill-{g}">{f}</span>'
     f'<p class="font-montserrat font-black text-brand" style="font-size:calc(20px * var(--tz)); margin:6px 0 0;">{q:,}</p>'
     f'<p class="legenda" style="margin:0; font-size:calc(9.5px * var(--tz));">{s}</p></div>'.replace(",", ".")
     for f, q, s, g in faixas)
