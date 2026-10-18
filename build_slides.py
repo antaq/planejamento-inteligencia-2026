@@ -5,7 +5,7 @@ Versão compacta (15 slides de conteúdo, fora capa, apresentador, divisórias e
 encerramento) de duas fontes:
   - Trilha Técnica, aula 8 (TrilhaTecnico/materiais/aula-8-planejamento-inteligencia):
     planejamento (PPF, responsiva, 3 níveis, sistemas) e inteligência (SISBIN,
-    RedeMAIS, SINESP/INFOSEG, Conportos, CEPAI/SP e OiBR).
+    RedeMAIS, SINESP/INFOSEG, Conportos e CEPAI/SP).
   - PAF 2027 ao Diretor-Geral (Planejamento2026/apresentacao_paf_diretoria):
     IPR 2.0, composição do PAF, temáticas e operacionais.
 
@@ -112,7 +112,7 @@ MODULOS = {
 SLIDES = []
 
 
-BASES = {4:1.7,5:1.7,6:1.6,7:1.45,8:2.1,10:1.5,11:1.35,12:1.65,13:1.55,14:1.7,16:1.55,17:1.7,18:1.55,19:1.6,20:1.7}
+BASES = {4:1.7,5:1.7,6:1.6,7:1.45,8:2.1,10:1.5,11:1.35,12:1.65,13:1.55,14:1.7,16:1.55,17:1.7,18:1.55,19:2.0,20:1.7}
 
 
 def slide(n, mod, title, kicker, titulo, body, extra_css="", base=1.0):
@@ -425,14 +425,11 @@ slide(18, 3, "SINESP / INFOSEG", "Inteligência · Segurança pública", "SINESP
         <div class="card" style="flex-direction:column; padding:10px 14px;"><p class="ct" style="font-size:calc(18px * var(--tz));">Segurança</p><p class="cd" style="font-size:calc(15px * var(--tz));">protege agentes em abordagens</p></div>
       </div>""")))
 
-slide(19, 3, "Conportos, CEPAI/SP e OiBR", "Inteligência · Segurança portuária", "Segurança portuária em rede",
-      '  <div class="flex-1 px-16 pb-4 grid grid-cols-3 gap-6 items-center min-h-0" style="align-content:center;">\n'
+slide(19, 3, "Conportos e CEPAI/SP", "Inteligência · Segurança portuária", "Segurança portuária em rede",
+      '  <div class="flex-1 px-16 pb-4 grid grid-cols-3 gap-6 min-h-0" style="align-items:stretch; align-content:center; padding-top:60px; padding-bottom:60px;">\n'
       + card("fa-shield-halved", "Conportos", "Comissão Nacional de Segurança Pública nos Portos, Terminais e Vias Navegáveis. Reúne Marinha, Polícia Federal, ANTAQ e outros para coordenar a segurança portuária.", "")
       + card("fa-list-check", "O que a Conportos faz", "Grupo de Trabalho do Código ISPS, Declaração de Cumprimento para terminais e o Curso Nacional de Auditoria em Instalação Portuária.", "")
       + card("fa-people-group", "CEPAI/SP", "Comissão Estadual de Prevenção de Acidentes e Incidentes: fórum técnico em Santos e São Sebastião, que integra agentes portuários e órgãos reguladores.", "")
-      + card("fa-mobile-screen-button", "OiBR", "Aplicativo de registro e análise de ocorrências, que nasceu como OI-CEPAI e hoje avança para portos de todo o Brasil. Desenvolvido por estudantes da Fatec Rubens Lara.", "")
-      + card("fa-clock", "Módulo EROIP", "Registros rápidos conforme o Código ISPS, com prazo de até 24 horas.", "")
-      + card("fa-chart-pie", "Para que serve", "Ocorrências analisadas por local, tipo de operação e vítimas viram base para políticas públicas mais eficazes: safety e security.", "card-green")
       + "\n  </div>")
 
 # ---------------------------------------------------------------------------
@@ -566,7 +563,7 @@ divisor(9, "02", "O PAF: plano anual",
 divisor(15, "03", "Inteligência da fiscalização",
         "Parcerias e fontes que ampliam a detecção, a análise e a atuação do fiscal.", "fa-satellite-dish",
         [("fa-brain", "SISBIN"), ("fa-satellite", "RedeMAIS"), ("fa-database", "SINESP / INFOSEG"),
-         ("fa-anchor", "Conportos · CEPAI/SP · OiBR")],
+         ("fa-anchor", "Conportos e CEPAI/SP")],
         "Decreto nº 11.693/2023 · Portaria GAB/DG/ABIN nº 926/2023")
 
 
