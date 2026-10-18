@@ -21,3 +21,7 @@ Para ver: `python3 -m http.server 8766` nesta pasta e abrir `http://localhost:87
 ## Animação de entrada
 
 `anim.js` (copiado de `apresentacao_sfc_agendas_sincronia`) faz os cards entrarem em sequência, como cartas postas na mesa; os rótulos de seção surgem e a barra de grupos de risco (slide 6) cresce da esquerda para a direita. Vale para o apresentador, os slides de conteúdo e o encerramento; capa e divisórias ficam de fora. Textos soltos, fora dos cards, deslizam da esquerda para a direita, começando transparentes (`.anim-desliza`; `.txt` agrupa vários textos numa peça só). Respeita "reduzir movimento". Este deck não tem tabelas, então a animação de tabela não aparece aqui.
+
+## Passador sem fio
+
+O `index.html` descarta avanços por tecla (seta direita, espaço, PageDown) que chegam menos de 600 ms depois de outro avanço por tecla, porque alguns passadores disparam a tecla mais de uma vez por clique. Voltar, Home, End, pontinhos e botões não são limitados. Para testar outro valor: `?intervalo=800` na URL (em milissegundos; `0` desliga).

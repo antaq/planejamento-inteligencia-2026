@@ -148,6 +148,19 @@
     }
 
     function next() { if (current < total) { current++; render(); } }
+    // Passadores sem fio às vezes disparam a tecla duas vezes ou mais por clique. Depois de um
+    // avanço por tecla, os avanços por tecla seguintes dentro do intervalo são descartados (o
+    // primeiro passa na hora, sem fila). Voltar, Home, End, pontinhos e botões não são afetados.
+    // Ajuste pela URL: ?intervalo=800 (milissegundos; 0 desliga).
+    const pedido = parseInt(new URLSearchParams(location.search).get('intervalo'), 10);
+    const INTERVALO_AVANCO = Number.isFinite(pedido) && pedido >= 0 ? pedido : 600;
+    let ultimoAvancoTecla = -Infinity;
+    function nextTecla() {
+      const agora = performance.now();
+      if (agora - ultimoAvancoTecla < INTERVALO_AVANCO) return;
+      ultimoAvancoTecla = agora;
+      next();
+    }
     function prev() { if (current > 1) { current--; render(); } }
     function goHome() { current = 1; render(); }
 
@@ -183,7 +196,7 @@
 
     document.addEventListener('keydown', (e) => {
       if (e.ctrlKey || e.metaKey || e.altKey) return; // preserva o zoom nativo do navegador
-      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); next(); }
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); nextTecla(); }
       else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); prev(); }
       else if (e.key === 'Home') { e.preventDefault(); goHome(); }
       else if (e.key === 'End') { e.preventDefault(); current = total; render(); }
@@ -196,7 +209,7 @@
     window.addEventListener('message', (e) => {
       if (e.data && e.data.type === 'slide-nav') {
         const key = e.data.key;
-        if (key === 'ArrowRight' || key === ' ' || key === 'PageDown') next();
+        if (key === 'ArrowRight' || key === ' ' || key === 'PageDown') nextTecla();
         else if (key === 'ArrowLeft' || key === 'PageUp') prev();
         else if (key === 'Home') goHome();
         else if (key === 'End') { current = total; render(); }
